@@ -333,7 +333,7 @@ import java.util.Hashtable;
 		        //A = AreaLeft(G);
 		        
 		        //System.out.println(" AREA LEFT OF MAP:" + A + "VS AREA HACK:"+AREA);
-		        boolean ABF = false;
+		        //boolean ABF = false;
 		        
 		        if(AREA==0)
 		            this.ABF = true;
@@ -346,7 +346,7 @@ import java.util.Hashtable;
 		        //Area queen takes up on board
 		        this.QAM.put(""+I+""+J,Area);
 		        
-		        return ABF;
+		        return this.ABF;
 		    }      
 		    
 		    /*
