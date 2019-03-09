@@ -134,7 +134,7 @@ import java.util.Hashtable;
 		           }
 		       }
 		        
-		        if(/*AllBoardsFilled(S.States)*/ABF
+		        if(/*AllBoardsFilled(S.States)*/this.ABF
 		        ){
 		            return;
 		        }
