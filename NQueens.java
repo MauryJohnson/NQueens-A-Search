@@ -42,7 +42,7 @@ public class NQueens {
 	public static void main(String[] args) {
 		
 		//This takes about 10 seconds using A*
-		new NQueens().nQueens(10);
+		new NQueens().nQueens(11);
 		
 	}
 

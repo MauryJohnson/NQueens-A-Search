@@ -82,7 +82,7 @@ import java.util.Hashtable;
 		        }
 		        
 		       
-		       boolean ABF = false;
+		       //boolean ABF = true;
 		        
 		       //System.out.println("------NEW LEVEL------");
 		       for(int i=0; i<N;i+=1){
@@ -93,10 +93,11 @@ import java.util.Hashtable;
 		               
 		           //Choose N*N points on grid for queen to go
 		           String[][] G = CopyGrid(S.GRID);
-		        
-		           ABF = S.CrissCross(G,i,j);
+		           
+		           S.CrissCross(G,i,j);
 		           
 		           State S2 = new State(G,S.QAM,S.GAM,S.QOB,i,j);
+		           
 		           S2.AREA = S.AREA;
 		               
 		           int U = S2.FValue(i,j);    
@@ -134,14 +135,16 @@ import java.util.Hashtable;
 		           }
 		       }
 		        
-		        if(/*AllBoardsFilled(S.States)*/this.ABF
-		        ){
-		            return;
-		        }
+		       
+		       // if(/*AllBoardsFilled(S.States)*/ABF
+		        //){
+		          //  return;
+		        //}
 		        
 		        for(int i=0; i<S.States.size();i+=1){
 		            //if(S.States.get(i).FValue
-		            NQueens(SS,S.States.get(i),MaxUtility,N);
+		        	if(!S.ABF)
+		        		NQueens(SS,S.States.get(i),MaxUtility,N);
 		            Nullify(S.States.get(i));
 		        }
 		        
